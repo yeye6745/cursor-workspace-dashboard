@@ -1,0 +1,42 @@
+.dashboard-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: var(--Material-BG, #E3E7EA);
+  font-family:'Pretendard', sans-serif;
+  overflow: hidden;
+}
+
+.edit-mode-container {
+  /* 편집 모드일 때 전체 화면 */
+  width: 100vw;
+  height: 100vh;
+  background: #EDF0F2; /* 워크보드와 동일한 배경색으로 플래시 방지 */
+}
+
+.dashboard-main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.dashboard-content {
+  flex: 1;
+  overflow: auto;
+  padding: 0;
+  background: var(--Material-BG, #E3E7EA);
+}
+
+.viewmode-workboard {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding: 4px;
+}
+
+/* 뷰모드 위젯들은 ViewModeWidget 컴포넌트에서 inline style로 절대 위치 지정 */
+.viewmode-widget {
+  /* position, left, top, width, height는 inline style */
+}

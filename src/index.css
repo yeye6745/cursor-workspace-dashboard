@@ -1,0 +1,46 @@
+:root {
+  font-family: 'Noto Sans KR', 'Pretendard', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color Variables */
+  --Gray-10-00: white;
+  --Gray-00-12: #282C32;
+  --Gray-02-10: #626872;
+  --Gray-03-07: #B1B7C0;
+  --Gray-04-06: #BEC4CB;
+  --Gray-05-03: #E3E7EA;
+  --Gray-05-05: #C9CDD2;
+  --Gray-05-06: #BEC4CB;
+  --Gray-07-00: white;
+  --Gray-07-01: #F8F9FA;
+  --Gray-Light-12: #282C32;
+  --Blue-05-05: #3B82F6;
+  --Green-10-00: #ECFDF5;
+  --Green-05-05: #10B981;
+  --Green-02-08: #065F46;
+  --Material-BG: #E3E7EA;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--Material-BG, #E3E7EA);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}

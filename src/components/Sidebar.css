@@ -1,0 +1,187 @@
+.sidebar {
+  width: 60px;
+  height: 100vh;
+  background: var(--Gray-Light-12, #282C32);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  padding: 12px 12px 4px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.logo-container {
+  height: 24px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  width: 20px;
+  height: auto;
+  display: block;
+}
+
+.search-container {
+  height: 36px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-container:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-menu {
+  flex: 1;
+  padding: 0 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: opacity 200ms ease-in-out;
+  /* Firefox scrollbar - 기본적으로 숨김 */
+  scrollbar-width: none;
+}
+
+.sidebar-menu:hover {
+  /* Firefox scrollbar - 호버 시 표시 (오버레이) */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-default) transparent;
+}
+
+.sidebar-menu.hovered:hover {
+  scrollbar-color: var(--scrollbar-hovered) transparent;
+}
+
+/* Custom scrollbar styling - 기본적으로 숨김 */
+.sidebar-menu::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+  background: transparent;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+  display: none;
+  background: transparent;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+  display: none;
+  background: transparent;
+}
+
+/* 호버 시 스크롤바 표시 - 오버레이 방식 */
+.sidebar-menu:hover::-webkit-scrollbar {
+  width: 10px !important;
+  display: block;
+  background: transparent;
+  /* 스크롤바가 콘텐츠 위에 오버레이되도록 */
+  position: absolute;
+  right: 0;
+}
+
+.sidebar-menu:hover::-webkit-scrollbar-track {
+  display: block;
+  background: transparent;
+  margin: 0;
+  border: none;
+}
+
+.sidebar-menu:hover::-webkit-scrollbar-thumb {
+  display: block;
+  background-image: var(--scrollbar-default);
+  background-repeat: repeat-y;
+  background-size: 10px 100%;
+  border-radius: 3px;
+  transition: background-image 200ms ease-in-out;
+  border: none;
+}
+
+.sidebar-menu.hovered:hover::-webkit-scrollbar-thumb {
+  background-image: var(--scrollbar-hovered);
+}
+
+.sidebar-menu:hover::-webkit-scrollbar-thumb:hover {
+  background-image: var(--scrollbar-hovered);
+}
+
+.sidebar-menu:hover::-webkit-scrollbar-thumb:active {
+  background-image: var(--scrollbar-pressed);
+}
+
+.menu-item {
+  height: 36px;
+  padding: 8px;
+  background: var(--Gray-00-12, #282C32);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-wrapper {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-footer {
+  padding: 8px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.20);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-item {
+  height: 36px;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.footer-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.profile-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: 1px solid #93CAFF;
+}
